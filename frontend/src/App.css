@@ -1,0 +1,40 @@
+ /* Navigate to FormRental Page */
+            /* <Link to="/FormRental">
+                <button className="add-tractor-btn">
+                    <FontAwesomeIcon icon={faPlus} /> Add Tractor
+                </button>
+            </Link> */
+
+            /* <div className="container">
+    <div className="row">
+        {tractors.map((tractor) => (
+            <div key={tractor._id} className="col-md-4 col-sm-6 col-12">
+                <div className="card">
+                    <img src={tractor.image || "https://via.placeholder.com/226x176"} alt="Tractor" />
+                    <div className="card-content">
+                        <h5 className="card-title">{tractor.model}</h5>
+                        <div className="info">
+                            <p><FontAwesomeIcon icon={faUser} /> {tractor.name}</p>
+                            <p><FontAwesomeIcon icon={faMapMarkerAlt} /> {tractor.location}</p>
+                        </div>
+                        <div className="info">
+                            <p><FontAwesomeIcon icon={faRupeeSign} /> {tractor.pricePerDay}/day</p>
+                            <p className={tractor.availability ? "available" : "unavailable"}>
+                                <FontAwesomeIcon icon={faCheckCircle} /> {tractor.availability ? "Available" : "Unavailable"}
+                            </p>
+                        </div>
+
+                        {/* Booking Section */
+                        /* <div className="booking">
+                            <input type="date" onChange={(e) => setBooking({ ...booking, startDate: e.target.value })} />
+                            <input type="date" onChange={(e) => setBooking({ ...booking, endDate: e.target.value })} />
+                            <button onClick={() => handleBooking(tractor._id)}>
+                                <FontAwesomeIcon icon={faCalendarAlt} /> Book
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+// </div> */

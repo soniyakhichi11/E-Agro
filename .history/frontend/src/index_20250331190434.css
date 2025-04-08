@@ -1,0 +1,797 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
+nav {
+  background-color: #153448;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Section for Brand and Links */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Brand Name */
+.brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #87ceeb;
+}
+
+/* Main dropdown container */
+.nav-links .dropdown {
+  position: relative;
+}
+
+/* Style for dropdown menu */
+.dropdown-menu {
+  display: none;  /* Hide the dropdown by default */
+  position: absolute;
+  top: 100%;  /* Position the dropdown below the 'Services' link */
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  padding: 10px 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+/* Show the dropdown when hovering over the parent list item */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Style for each dropdown link */
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* Button Styling for Register and Login */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.88rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #157347;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.left-section {
+  flex: 1;
+  background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  position: relative;
+}
+
+.form-container {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.profile-image {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  object-fit: cover;
+}
+
+.rental-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height of the viewport */
+  padding:20px;
+}
+.rental-form {
+  max-width: 40%;
+  width: 80%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.rental-form__group {
+  margin-bottom: 15px;
+}
+.rental-form__label {
+  font-weight: bold;
+}
+.rental-form__input, .rental-form__select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.rental-form__availability--available {
+  color: green;
+  font-weight: bold;
+}
+.rental-form h1{
+  text-align: center;
+}
+.rental-form h2 {
+  text-align: center; /* Keeps text aligned to the left */
+  margin-left: 20px; /* Moves text slightly to the right */
+}
+.rental-form__button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.rental-form__button:hover {
+  background: #0056b3;
+}
+
+
+/* Main container layout */
+.container-rental {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  color: #007bff;
+}
+
+.sidebar2 ul :hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Cards container */
+.cards-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+}
+
+.available {
+  color: green;
+  font-weight: bold;
+}
+
+.unavailable {
+  color: red;
+  font-weight: bold;
+}
+
+.date-label {
+  margin-right: 40px; /* Adds space between label and input */
+}
+.date-label2 {
+  margin-right: 45px; /* Adds space between label and input */
+}
+
+.date-input {
+  margin-bottom: 30px; /* Adds space below the input box */
+}
+.btn-rental{
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* Booking section */
+
+.container-book {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto; /* Centering the whole container */
+}
+
+.booking-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-content: center; /* Centering content horizontally */
+}
+
+.image-box, .info-box {
+  width: 320px;
+  height: 320px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 20px;
+  margin-left: -19px; /* Removing negative margin */
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.info-box p {
+  margin: 5px 0;
+}
+
+.reviews-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Centering reviews */
+}
+
+.review-box {
+  width: 300px;
+  height: 200px;
+  background-color: #f0f0e6;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stars {
+  color: gold;
+}
+.btn-confirm{
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top:30%;
+}
+
+.info-box  p{
+     margin-left: -100px;
+}
+.info-box label{
+  margin-left: -120px;
+}
+.info-box input{
+  margin-left: -20px;
+}
+
+/* Carousel.css */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: #0056b3;
+}
+
+.carousel-container {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+/* General container styling */
+.container-kite {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Styling for each section */
+.service-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.featurette-heading {
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Specific image styling */
+.featurette-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Optional additional styling for text colors and margins */
+.text-body-secondary {
+  color: #6c757d;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.lh-1 {
+  line-height: 1.2;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Flex utility classes */
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-7, .col-md-5 {
+  flex: 0 0 auto;
+  width: 58.3333%;
+}
+
+@media (max-width: 768px) {
+  .col-md-7, .col-md-5 {
+    width: 100%;
+  }
+}
+/* home */
+.carousel-inner img {
+  width: 100%;
+  height: 500px; /* Adjust this height as needed */
+  object-fit: cover;
+  object-position: center;
+}
+.tiger{
+  background-color: #F0F0F7;
+}
+
+.lion{
+  height: 400px;
+  width:400px;
+}
+.lion2{
+  margin-right:9rem;
+  
+}
+.custom-img {
+  width: 100%; /* Makes the image responsive */
+  height: 300px; /* Fixed height */
+  object-fit: cover; /* Ensures the image fills the area without distortion */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* footer */
+
+.footer {
+  background-color: #153448; /* Dark background */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;  /* Ensures elements stack vertically */
+  align-items: center;
+}
+
+.footer ul.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc; /* Thin horizontal line */
+  padding-bottom: 10px; /* Space between links and line */
+  width: 100%;
+}
+
+.footer ul.nav li {
+  margin: 0 15px;
+}
+
+.footer ul.nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.copyright {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* About */
+.carousel-inner-about img {
+  width: 100%;
+  height: 500px;
+  /* Adjust this height as needed */
+  object-fit: cover;
+  object-position: center;
+  /* border-bottom-left-radius: 5rem; */
+}
+
+.carousel-container-about {
+  position: relative;
+  flex-grow: 1;
+  /* Make it a positioning context for the xyz div */
+}
+
+.xyz {
+  background-color: white;
+  height: 600px;
+  width: 80%;
+  position: absolute;
+  top: 70%;
+  /* Adjust this value to lift half of the div */
+  transform: translateY(1%);
+  z-index: 10;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  margin-left: 10rem;
+  padding: 2rem;
+  padding-bottom: 50px; 
+}
+
+.apple {
+  top: 47%;
+}
+
+.main-about{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* user button */
+/* User Dropdown (Styled like Services) */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.user-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu (Same Style as Services) */
+.user-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 220px;
+  padding: 10px;
+  list-style: none;
+  z-index: 10;
+}
+
+.user-dropdown:hover .user-menu {
+  display: block;
+}
+
+.user-menu li {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-menu li:last-child {
+  border-bottom: none;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 8px 0;
+  background: #dc3545;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-button:hover {
+  background: #b02a37;
+}
+
+
+/* register page left side */
+
+.left-section {
+  position: relative;
+  padding: 20px;
+}
+
+.e-agro-title {
+  color: green;
+  font-size: 2rem;
+  position: absolute;
+  top: 10px; /* Moves it slightly towards the top */
+  right: 410px; /* Moves it towards the right */
+}
+
+.register-text {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 3rem; /* Pushes the paragraph below E-Agro */
+  text-align: left;
+
+}
+
+.register-text2 {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 9rem; /* Ensures paragraph is below h3 */
+  text-align: cen;
+}
